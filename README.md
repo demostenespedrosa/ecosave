@@ -152,12 +152,6 @@ Para facilitar os testes, você pode querer inserir alguns dados iniciais:
 
 ---
 
-## 📂 Estrutura do Projeto (Visão Geral)
-
-EcoSave/├── api/                      # Scripts PHP para a lógica da API backend│   ├── add_offer.php│   ├── get_categories.php│   ├── get_categorized_offers.php│   ├── get_my_business_offers.php│   ├── get_my_orders.php│   ├── get_offer_details.php│   ├── get_reservations.php│   ├── mark_order_collected.php│   ├── reserve_offer.php│   ├── update_offer.php│   ├── user_login.php│   ├── user_logout.php│   └── user_register.php├── css/                      # Arquivos CSS│   └── style.css             # Estilos globais e customizados├── includes/                 # Partes reutilizáveis de PHP│   ├── db_connect.php        # Conexão com o banco de dados│   ├── footer.php            # Rodapé HTML comum│   ├── header.php            # Cabeçalho HTML comum│   ├── nav_consumidor.php    # Barra de navegação do consumidor│   └── nav_estabelecimento.php # Barra de navegação do estabelecimento├── js/                       # Arquivos JavaScript│   └── business.js           # Lógica JS para a área do estabelecimento├── uploads/                  # Pasta para imagens das ofertas (requer permissão de escrita)├── cadastro_consumidor.php   # Página de cadastro do consumidor├── cadastro_estabelecimento.php # Página de cadastro do estabelecimento├── dashboard_consumidor.php  # Painel principal do consumidor (descoberta de ofertas)├── dashboard_estabelecimento.php # Painel principal do estabelecimento├── detalhe_oferta.php        # Página de detalhes de uma oferta específica├── gerenciar_ofertas.php     # Página para estabelecimentos gerenciarem suas ofertas├── index.php                 # Ponto de entrada, redireciona com base na sessão├── login.php                 # Página de login├── logout.php                # Script para encerrar a sessão├── meus_pedidos.php          # Página para o consumidor ver seus pedidos├── perfil_consumidor.php     # Página de perfil do consumidor├── perfil_estabelecimento.php # Página de perfil do estabelecimento└── ver_reservas.php          # Página para estabelecimentos verem suas reservas
----
-
-<!--
 ## 📸 Screenshots (Exemplos)
 
 <p align="center">
