@@ -1,0 +1,12 @@
+<?php
+// /includes/footer.php
+// Gerado em: 24/05/2025, 11:45:00 (Horário de Brasília)
+// Localização: Cabo de Santo Agostinho, Pernambuco, Brasil
+?>
+    </main> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script
+  src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+  type="module"
+></script>
+    </body>
+</html>

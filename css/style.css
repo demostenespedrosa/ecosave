@@ -1,0 +1,281 @@
+/* /css/style.css - EcoSave iOS Design */
+/* Gerado em: 24/05/2025, 11:45:00 (Horário de Brasília) */
+/* Localização: Cabo de Santo Agostinho, Pernambuco, Brasil */
+
+/* --- Variáveis Globais de Design --- */
+:root {
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    
+    --color-primary-red: #FFCC00; /* Vermelho iOS */
+    --color-primary-red-dark: #FFCC00;
+    --color-primary-yellow: #FFCC00; /* Amarelo iOS */
+    --color-primary-yellow-dark: #D9AD00;
+    --color-accent-orange: #FF9500; /* Laranja iOS */
+
+    --color-text-primary: #1c1c1e; /* Quase preto (iOS Dark Mode Text) */
+    --color-text-secondary: #8e8e93; /* Cinza secundário (iOS) */
+    --color-text-placeholder: #c7c7cc;
+
+    --color-background-light: #f2f2f7; /* Cinza claro de fundo (iOS) */
+    --color-background-elevated: #ffffff; /* Branco para cards, modais */
+    
+    --color-separator-light: #e5e5ea; /* Linhas divisórias */
+    --color-separator-dark: #d1d1d6;
+
+    --border-radius-standard: 10px; /* Bordas arredondadas iOS */
+    --border-radius-large: 14px;
+    --box-shadow-light: 0 2px 8px rgba(0,0,0,0.06);
+    --box-shadow-medium: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* --- Reset Básico e Padrões --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    font-size: 16px; /* Base para REMs */
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-background-light);
+    color: var(--color-text-primary);
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    /* Essencial para a barra de navegação inferior não sobrepor conteúdo */
+    padding-bottom: calc(65px + env(safe-area-inset-bottom)); /* Altura da nav + safe area */
+}
+
+main.container-fluid.px-0 { /* Garante que o main principal não tenha paddings laterais */
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    min-height: calc(100vh - (65px + env(safe-area-inset-bottom))); /* Ocupa a altura disponível */
+    display: flex;
+    flex-direction: column;
+}
+.content-wrapper { /* Use este div dentro do main para adicionar padding às páginas */
+    padding: 1rem; /* 16px */
+    flex-grow: 1; /* Faz o conteúdo crescer para ocupar espaço */
+}
+
+
+/* --- Tipografia --- */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600; /* Semi-bold para títulos */
+    color: var(--color-text-primary);
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+h1 { font-size: 2rem; line-height: 1.2; } /* 32px */
+h2 { font-size: 1.75rem; line-height: 1.25; } /* 28px */
+h3 { font-size: 1.375rem; line-height: 1.3; } /* 22px */
+h4 { font-size: 1.125rem; line-height: 1.4; } /* 18px */
+
+p {
+    margin-bottom: 1rem;
+    color: var(--color-text-secondary);
+}
+a {
+    color: var(--color-primary-red);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+a:hover {
+    color: var(--color-primary-red-dark);
+    text-decoration: none; /* iOS geralmente não sublinha links */
+}
+
+/* --- Botões Estilo iOS --- */
+.btn {
+    font-family: var(--font-primary);
+    font-weight: 600; /* Semi-bold */
+    border-radius: var(--border-radius-standard);
+    padding: 0.75rem 1.25rem; /* 12px 20px */
+    border: none;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    font-size: 1rem; /* 16px */
+}
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary-red {
+    background-color: var(--color-primary-red);
+    color: white;
+}
+.btn-primary-red:hover, .btn-primary-red:focus {
+    background-color: var(--color-primary-red-dark);
+    color: white;
+}
+
+.btn-primary-yellow {
+    background-color: var(--color-primary-yellow);
+    color: var(--color-text-primary); /* Texto escuro em botão amarelo */
+}
+.btn-primary-yellow:hover, .btn-primary-yellow:focus {
+    background-color: var(--color-primary-yellow-dark);
+    color: var(--color-text-primary);
+}
+
+.btn-outline-red {
+    background-color: transparent;
+    color: var(--color-primary-red);
+    border: 2px solid var(--color-primary-red);
+}
+.btn-outline-red:hover, .btn-outline-red:focus {
+    background-color: var(--color-primary-red);
+    color: white;
+}
+
+.btn-subtle {
+    background-color: var(--color-background-light);
+    color: var(--color-primary-red);
+    font-weight: 500;
+}
+.btn-subtle:hover, .btn-subtle:focus {
+    background-color: #e5e5ea; /* Um pouco mais escuro */
+}
+
+.btn-lg {
+    padding: 0.875rem 1.5rem; /* 14px 24px */
+    font-size: 1.125rem; /* 18px */
+}
+
+/* --- Formulários Estilo iOS --- */
+.form-control, .form-select {
+    font-family: var(--font-primary);
+    background-color: var(--color-background-elevated);
+    border: 1px solid var(--color-separator-dark);
+    border-radius: var(--border-radius-standard);
+    padding: 0.75rem 1rem; /* 12px 16px */
+    font-size: 1rem; /* 16px */
+    color: var(--color-text-primary);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.form-control::placeholder {
+    color: var(--color-text-placeholder);
+}
+.form-control:focus, .form-select:focus {
+    border-color: var(--color-primary-red);
+    box-shadow: 0 0 0 0.2rem rgba(255, 59, 48, 0.25); /* Sombra vermelha iOS */
+    background-color: var(--color-background-elevated);
+}
+.form-floating > label {
+    color: var(--color-text-secondary);
+}
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label {
+    color: var(--color-primary-red); /* Cor do label flutuante */
+}
+
+
+/* --- Cards Estilo iOS --- */
+.card {
+    background-color: var(--color-background-elevated);
+    border: none; /* iOS cards geralmente não têm bordas visíveis, usam sombra */
+    border-radius: var(--border-radius-large); /* Bordas mais pronunciadas */
+    box-shadow: var(--box-shadow-light);
+    margin-bottom: 1.25rem; /* 20px */
+}
+.card-header {
+    background-color: transparent; /* Sem fundo no header do card */
+    border-bottom: 1px solid var(--color-separator-light);
+    padding: 1rem 1.25rem; /* 16px 20px */
+    font-weight: 600;
+}
+.card-body {
+    padding: 1.25rem; /* 20px */
+}
+.card-footer {
+    background-color: transparent;
+    border-top: 1px solid var(--color-separator-light);
+    padding: 1rem 1.25rem;
+}
+
+/* --- Listas Estilo iOS --- */
+.list-group-item {
+    background-color: var(--color-background-elevated);
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid var(--color-separator-light);
+    padding: 0.875rem 1.25rem; /* 14px 20px */
+    color: var(--color-text-primary);
+}
+.list-group-item:first-child {
+    border-top: none;
+    border-top-left-radius: var(--border-radius-large); /* Arredonda o primeiro item se o list-group tiver borda */
+    border-top-right-radius: var(--border-radius-large);
+}
+.list-group-item:last-child {
+    border-bottom: none;
+    border-bottom-left-radius: var(--border-radius-large);
+    border-bottom-right-radius: var(--border-radius-large);
+}
+.list-group-item.active {
+    background-color: var(--color-primary-red);
+    color: white;
+    border-color: var(--color-primary-red);
+}
+.list-group-item-action:hover, .list-group-item-action:focus {
+    background-color: #f0f0f0; /* Um cinza claro para hover */
+    color: var(--color-text-primary);
+}
+.list-group-item i { /* Ícones dentro de listas */
+    margin-right: 1rem; /* 16px */
+    color: var(--color-primary-red);
+    width: 20px; /* Alinhamento */
+    text-align: center;
+}
+
+/* --- Barra de Navegação Inferior --- */
+.app-bottom-nav { /* Classe para ambas as navs inferiores */
+    background-color: rgba(255, 255, 255, 0.9); /* Efeito translúcido iOS */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 0.5px solid var(--color-separator-dark); /* Linha fina */
+    padding-top: 8px; /* Espaço acima dos ícones */
+    padding-bottom: calc(8px + env(safe-area-inset-bottom)); /* Espaço abaixo + safe area */
+    min-height: calc(60px + env(safe-area-inset-bottom)); /* Altura total mínima */
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+}
+.app-bottom-nav .nav-link {
+    color: var(--color-text-secondary);
+    font-size: 0.6875rem; /* 11px, comum em tab bars iOS */
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.3;
+}
+.app-bottom-nav .nav-link i {
+    font-size: 1.5rem; /* 24px */
+    margin-bottom: 2px;
+}
+.app-bottom-nav .nav-link.active {
+    color: var(--color-primary-red);
+}
+.app-bottom-nav .nav-link.active i {
+    /* Poderia ter um estilo de ícone preenchido para o ativo */
+}
+
+/* --- Utilitários --- */
+.text-small { font-size: 0.875rem; /* 14px */ }
+.text-xsmall { font-size: 0.75rem; /* 12px */ }
+.fw-medium { font-weight: 500 !important; }
+.fw-semibold { font-weight: 600 !important; }
+.fw-bold { font-weight: 700 !important; }
+
+.shadow-card { box-shadow: var(--box-shadow-medium); }
+
+/* Ajustes para telas muito pequenas, se necessário */
+@media (max-width: 360px) {
+    html { font-size: 15px; }
+    .btn { padding: 0.6rem 1rem; }
+}
+
